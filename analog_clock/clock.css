@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #01000f;
+}
+
+.container{
+    position: relative;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(18, 1, 88, 0.5);
+    border: 5px solid rgba(255, 255, 255,0.25);
+    box-shadow: 0px 0px 30px rgba(109, 3, 3, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg *var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b{
+    display:inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+    font-size: 20px;
+};
+
+
+.clock::before{
+    content: "demo content";
+}
+
+.clock::before{
+    content: " ";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(118, 118, 167);
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    display: block;
+    position: absolute;
+    background-color:var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px
+}
+
+#hour i{
+    width:6px;
+}
+
+#minute i{
+    width: 5px;
+}
